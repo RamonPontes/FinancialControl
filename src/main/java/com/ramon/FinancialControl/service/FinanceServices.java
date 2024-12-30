@@ -21,4 +21,8 @@ public class FinanceServices {
     public Optional<Finance> getFinanceById(int id) {
         return financeRepository.findById(id);
     }
+
+    public Finance createFinance(Finance data) {
+        return financeRepository.save(data);
+    }
 }

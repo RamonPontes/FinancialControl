@@ -1,12 +1,10 @@
 package com.ramon.FinancialControl.controller;
 
+import com.ramon.FinancialControl.models.Finance;
 import com.ramon.FinancialControl.service.FinanceServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -18,6 +16,11 @@ public class FinanceController {
     @GetMapping("/")
     public ResponseEntity<?> getAllFinances() {
         return ResponseEntity.ok(financeServices.getAllFinances());
+    }
+
+    @PostMapping("/")
+    public ResponseEntity<?> createFinance(@RequestBody Finance data) {
+        return ResponseEntity.ok(financeServices.createFinance(data));
     }
 
     @GetMapping("/{id}")
