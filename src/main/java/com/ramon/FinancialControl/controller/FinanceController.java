@@ -16,11 +16,6 @@ public class FinanceController {
     private FinanceServices financeServices;
 
     @GetMapping("/")
-    public ResponseEntity<?> helloWorld() {
-        return ResponseEntity.ok("Hello World");
-    }
-
-    @GetMapping("/")
     public ResponseEntity<?> getAllFinances() {
         return ResponseEntity.ok(financeServices.getAllFinances());
     }
