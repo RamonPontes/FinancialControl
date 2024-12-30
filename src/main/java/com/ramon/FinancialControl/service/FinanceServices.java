@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FinanceServices {
@@ -15,5 +16,9 @@ public class FinanceServices {
 
     public List<Finance> getAllFinances() {
         return financeRepository.findAll();
+    }
+
+    public Optional<Finance> getFinanceById(int id) {
+        return financeRepository.findById(id);
     }
 }
