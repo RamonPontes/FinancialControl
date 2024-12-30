@@ -12,6 +12,7 @@ public class Finance {
     private int id;
     private String name;
     private String description;
+    private String status;
     private double value;
 
     public int getId() {
@@ -36,6 +37,14 @@ public class Finance {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public double getValue() {
