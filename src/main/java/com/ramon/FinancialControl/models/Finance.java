@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
+
 @Entity
 public class Finance {
     @Id
@@ -13,6 +15,7 @@ public class Finance {
     private String name;
     private String description;
     private String status;
+    private LocalDate dueData;
     private double value;
 
     public int getId() {
@@ -45,6 +48,14 @@ public class Finance {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public LocalDate getDueData() {
+        return dueData;
+    }
+
+    public void setDueData(LocalDate dueData) {
+        this.dueData = dueData;
     }
 
     public double getValue() {

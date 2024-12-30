@@ -3,5 +3,6 @@ CREATE TABLE `Finance` (
 	`name` VARCHAR(255) NOT NULL,
 	`description` VARCHAR(255) NOT NULL,
 	`status` VARCHAR(255) NOT NULL,
+	`due_date` DATE NOT NULL,
 	`value` DOUBLE NOT NULL
 );
